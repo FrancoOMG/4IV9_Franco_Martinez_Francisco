@@ -300,6 +300,14 @@ class EstructuraDatos{
 
                 break;
             case 7:
+
+                //Tabla de multiplicar
+                for (int n = 1; n <= 10; n++) {
+                    
+                    System.out.println(n + "   |   " + (n*10 + "   |   " + (n*100) + "   |   "+(n*1000)));
+                    
+                }
+
                 break;
             case 8:
                 break;
