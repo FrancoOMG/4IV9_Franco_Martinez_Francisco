@@ -7,12 +7,12 @@ de algoritmia
 5.- desarrollar una tiendita para agregar productos y precios
 6.- desarrolar un programa para calcular el area y perimetro dd 5 diferentes figuras
 7.- desarrollar una tabla ahorita aver que se me ocurre 
-8.- desarrollar un rpograma para calcular el factorialcon recursividad
-9.- vamos hacer dibujitos wiiiii
+8.- desarrollar un rpograma para calcular el factorial con recursividad
+9.- vamos hacer dibujitos wiiiii trianguro equilatero o rombo
 10.- desarrollar una figura hueca
-11.- realizar algunos patrones
+11.- 
 12.- realizar un diamante
-13.- desarrollar una calculadora basica + - x /
+13.- desarrollar una calculadora basica + - x / para n numeros
 14.- 
 */
 import java.util.Scanner;
@@ -310,16 +310,116 @@ class EstructuraDatos{
 
                 break;
             case 8:
+
+                System.out.println("Ingrese un numero");
+                int factorial = entrada.nextInt();
+                int fac = 1;
+
+                for (int i = 1; i <= factorial; i++){
+                    fac = fac *i;
+                }
+                System.out.println("Factorial: " + fac);
                 break;
+
             case 9:
+                //vamos a hacer un cuadrado magico
+                System.out.println("Vamos a realizar el dibujo de u cuagrado magico");
+                System.out.println("Ingrese el tamaño del cuadrado");
+                int n1 = entrada.nextInt();
+
+                if (n1 >= 1 && n1 <=20){
+
+                    for( int i = 1; i <= n1; i++){
+                        
+                        for (int j = 1; j <= n1; j++){
+                            System.out.println("*");
+                            
+                        }
+                        System.out.println();
+                    }
+                    //se imprime
+                }else{
+                    System.out.println("porfavor solo ingrese numeros entre el 1 y el 20");
+                }
                 break;
             case 10:
+                System.out.println("Ingrese el tamaño del dibujo");
+                int numero = entrada.nextInt();
+                if (numero >= 1 && numero <= 20){
+                    for (int i = 1; i >= numero; i++){
+                        for (int j= 1; j <= numero; j++){
+                            if (i == 1 || i == numero || j==1 || j==numero){
+                                System.out.println("*");
+                            }else{
+                                System.out.println(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+                }
                 break;
             case 11:
                 break;
             case 12:
+
+                System.out.println("Realizaremos un Diamante");
+                System.out.println("Ingrese el tamaño del diamante: ");
+                int Tamaño = entrada.nextInt();
+                if(Tamaño >= 1 && Tamaño <= 15){   
+                    for (int i =1; i<= Tamaño; i++){
+                        for (int j = 1; j <= Tamaño - i; j++){
+                            System.out.print(" ");
+                        }
+
+                        for (int j = 1; j <= (2*i - 1); j++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                    for (int i = Tamaño - 1; i >= 1; i--){
+                        for (int j = 1; j <= Tamaño -i; j++){
+                            System.out.print(" ");
+                        }
+                        for (int j = 1; j <= (2*i - 1); j++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                }else{
+                    System.out.println("Porfavor solo ingrese valores entre 1 y el 15 (Enteros)");
+                }
                 break;
             case 13:
+                System.out.println("Calculadora");
+
+                System.out.println("Ingresa el primer numero");
+                float numero2 = entrada.nextFloat();
+
+
+                char continuar;
+                do { 
+                    System.out.println("Ingresa una operacion (+ - * /)");
+                    char operacion = entrada.next().charAt(0);
+                    
+                    System.out.println("ingrese numero");
+                    float num = entrada.nextFloat();
+
+                    if(operacion == '+'){
+                        numero2 = numero2 + num; 
+                    }else if (operacion == '-'){
+                        numero2 = numero2 - num;
+                    }else if (operacion == '*'){
+                        numero2 = numero2 * num;
+                    }else if (operacion == '/'){
+                        numero2 = numero2 / num;
+                    }else {
+                        System.out.println("Ingresa una operacion valida");
+                    }
+                    System.out.println("Resultado: "+ numero2);
+                    System.out.println("Quieres hacer otra operacion? (s / n)");
+                    continuar = entrada.next().charAt(0);
+                    
+                } while (continuar == 's' || continuar == 'S');
                 break;            
             default:
                 break;                                    
