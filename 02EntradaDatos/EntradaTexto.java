@@ -4,16 +4,16 @@ import java.util.Scanner;
 class entradatexto{
     //metodos principal
     public static void main (String [] args){
-        Scanner entrada = new
+        Scanner entrada = new Scanner(System.in);
         //variables locales
         String nombre;
         int edad;
         //entrada
         System.out.println("Escribe tu nombre: ");
-        System.console().readLine();
-        System.out.println("Hola " + nombre + "benvenido a este programa muy feo")
+         nombre = System.console().readLine();
+        System.out.println("Hola " + nombre + " benvenido a este programa muy feo");
 
-        System.out.println("Escribe tu edad: ")
+        System.out.println("Escribe tu edad: ");
         edad = entrada.nextInt();
         
     }
